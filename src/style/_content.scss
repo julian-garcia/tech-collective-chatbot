@@ -1,14 +1,23 @@
-h1, h2, h3, h4 {
-  font-family: $heading-font;
-}
-
-p, span, a, .bubble {
-  font-family: $copy-font;
-}
-
+h1, h2, h3, h4 { font-family: $heading-font; }
+p, span, a, .bubble { font-family: $copy-font; }
+a { text-decoration: none; }
 .text-center { text-align: center; }
-.site-title { width: 450px;  max-width: 100vw; margin: 2rem auto 2rem; }
-.page-heading { width: 650px; max-width: 100vw; margin: 4rem auto 3rem; }
+
+.site-title { 
+  width: 450px;  
+  max-width: 95vw; 
+  margin: 2rem auto 2rem; 
+}
+
+.page-heading { 
+  width: 650px; 
+  max-width: 95vw; 
+  margin: 4rem auto 3rem; 
+  z-index: 9;
+  position: relative;
+  background: white;
+}
+
 .colour-1-bg { color: white; background: $colour-1; }
 .colour-5-bg { color: black; background: $colour-5; }
 
@@ -16,24 +25,28 @@ p, span, a, .bubble {
   section:nth-of-type(4n + 1) { 
     background: $colour-1; 
     color: $colour-1; 
+    z-index: 0;
     &:before { border-color: $colour-1; }
     .arrow { border-color: $colour-1; color: $colour-1; }
   }
   section:nth-of-type(4n + 2) { 
     background: $colour-2; 
     color: $colour-2; 
+    z-index: 3;
     &:before { border-color: $colour-2; }
     .arrow { border-color: $colour-2; color: $colour-2; }
   }
   section:nth-of-type(4n + 3) { 
     background: $colour-3; 
     color: $colour-3; 
+    z-index: 2;
     &:before { border-color: $colour-3; } 
     .arrow { border-color: $colour-3; color: $colour-3; }
   }
   section:nth-of-type(4n + 4) { 
     background: $colour-4; 
     color: $colour-4; 
+    z-index: 1;
     &:before { border-color: $colour-4; }
     .arrow { border-color: $colour-4; color: $colour-4; }
   }
@@ -66,4 +79,15 @@ p, span, a, .bubble {
   position: absolute;
   top: 5%;
   left: -35%;
+}
+
+.intro {
+  margin: 4rem auto 3rem; 
+  @include tablet-landscape-up { margin: 4rem 0 3rem auto; }
+  @include desktop-up { margin: 4rem auto 3rem; }
+}
+.outtro {
+  margin-top: 85vw;
+  @include tablet-portrait-up { margin-top: 66vw; }
+  @include tablet-landscape-up { margin-top: 40vw; }
 }

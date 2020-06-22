@@ -23,7 +23,7 @@ const IndexPage = () => (
       <div className="bubble left">But we can make it easier!</div>
       <div className="bubble left"><span role="img" aria-label="">💪🧠</span> We just need to use some educational research and neuroscience <span role="img" aria-label="">🧠💪</span></div>
     </div>
-    <h2 className="page-heading">In this tutorial, we'll learn some JavaScript, following these concepts for effective learning.</h2>
+    <h2 className="page-heading text-center intro">In this tutorial, we'll learn some JavaScript, following these concepts for effective learning.</h2>
     <section className="angled-block right short">
       <img src={exampleImg} className="chatbot-image" alt="" />
     </section>
@@ -54,7 +54,9 @@ const IndexPage = () => (
         <p>We'll use (micro) interleaving to link together ideas</p>
       </div>
     </section>
-    
+    <h2 className="page-heading text-center outtro">If you enjoyed building this chatbot, and you are serious about coding, you might be a good fit for <span role="img" aria-label="">💻</span>Tech Collective!</h2>
+    <a href="/" className="button colour-1-bg" style={{margin:'0 auto 2rem'}}>Apply</a>
+
   </Layout>
 )
 
