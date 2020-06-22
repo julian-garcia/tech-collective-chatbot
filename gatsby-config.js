@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Build your own chatbot`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Build your own chatbot with just enough JavaScript.`,
+    author: `Julian Garcia`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

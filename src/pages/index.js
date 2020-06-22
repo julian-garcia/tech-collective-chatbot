@@ -55,7 +55,7 @@ const IndexPage = () => (
       </div>
     </section>
     <h2 className="page-heading text-center outtro">If you enjoyed building this chatbot, and you are serious about coding, you might be a good fit for <span role="img" aria-label="">💻</span>Tech Collective!</h2>
-    <a href="/" className="button colour-1-bg" style={{margin:'0 auto 2rem'}}>Apply</a>
+    <a href="/" className="button colour-1-bg" style={{margin:'0 auto 2rem'}}>Apply Now</a>
 
   </Layout>
 )

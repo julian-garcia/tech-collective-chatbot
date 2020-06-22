@@ -1,26 +1,23 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
 import "../style/main.scss"
+import { FaTwitter, FaLinkedinIn, FaLink } from 'react-icons/fa';
+import logoImg from "../images/logo.png"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <header style={{float:'left',marginLeft:'1rem'}}>
+        <a href="https://collective.tech/" target="_blank" rel="noreferrer"><img src={logoImg} alt="" style={{width:'50px'}} /> </a>
+      </header>
       <main className="content">{children}</main>
-      <footer>
+      <footer className="footer">
+        <div>
+          <a href="https://twitter.com/richardcrng"> <FaTwitter className="footer-social-icon" /> </a>
+          <a href="https://www.linkedin.com/in/richardcrng"> <FaLinkedinIn className="footer-social-icon" /> </a>
+          <a href="https://techcollective.substack.com"> <FaLink className="footer-social-icon" /> </a>
+        </div>
+        <p>&copy; Copyright {new Date().getFullYear()}. Tech Collective Group LTD</p>
       </footer>
     </>
   )
