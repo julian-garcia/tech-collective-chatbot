@@ -19,6 +19,9 @@ a { text-decoration: none; }
 }
 
 .colour-1-bg { color: white; background: $colour-1; }
+.colour-2-bg { color: white; background: $colour-2; }
+.colour-3-bg { color: white; background: $colour-3; }
+.colour-4-bg { color: white; background: $colour-4; }
 .colour-5-bg { color: black; background: $colour-5; }
 
 .content {
@@ -28,13 +31,15 @@ a { text-decoration: none; }
     z-index: 0;
     &:before { border-color: $colour-1; }
     .arrow { border-color: $colour-1; color: $colour-1; }
+    @include tablet-portrait-up { z-index: 0; }
   }
   section:nth-of-type(4n + 2) { 
     background: $colour-2; 
     color: $colour-2; 
-    z-index: 3;
+    z-index: 1;
     &:before { border-color: $colour-2; }
     .arrow { border-color: $colour-2; color: $colour-2; }
+    @include tablet-portrait-up { z-index: 3; }
   }
   section:nth-of-type(4n + 3) { 
     background: $colour-3; 
@@ -42,13 +47,15 @@ a { text-decoration: none; }
     z-index: 2;
     &:before { border-color: $colour-3; } 
     .arrow { border-color: $colour-3; color: $colour-3; }
+    @include tablet-portrait-up { z-index: 2; }
   }
   section:nth-of-type(4n + 4) { 
     background: $colour-4; 
     color: $colour-4; 
-    z-index: 1;
+    z-index: 3;
     &:before { border-color: $colour-4; }
     .arrow { border-color: $colour-4; color: $colour-4; }
+    @include tablet-portrait-up { z-index: 1; }
   }
 }
 
@@ -88,9 +95,10 @@ a { text-decoration: none; }
 }
 
 .outtro {
-  margin-top: 85vw;
-  @include tablet-portrait-up { margin-top: 66vw; }
-  @include tablet-landscape-up { margin-top: 40vw; }
+  margin-top: 115vw;
+  @include tablet-portrait-up { margin-top: 96vw; }
+  @include tablet-landscape-up { margin: 40vw 0 3rem auto; }
+  @include desktop-up { margin: 40vw auto 2rem auto; }
 }
 
 .footer {
@@ -98,8 +106,11 @@ a { text-decoration: none; }
   color: white;
   padding: 2rem 0;
   text-align: center;
+  height: 250px;
 
   p { margin: 0; }
+
+  @include tablet-portrait-up { height: unset; }
 }
 
 .footer-social-icon {
@@ -109,4 +120,24 @@ a { text-decoration: none; }
   padding: .5rem;
   margin: 10px 5px;
   border-radius: 3px;
+}
+
+.mobile-buttons {
+  @include phone {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding: 1.5rem .5rem 1rem;
+    text-align: center;
+    z-index: 99;
+    background: rgba(black,.5);
+
+    > * {
+      display: inline-block;
+      padding: .5rem;
+      margin: 0 5px 5px 0;
+    }
+  }
+  @include tablet-portrait-up { display: none }
 }

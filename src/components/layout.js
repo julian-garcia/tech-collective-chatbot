@@ -13,9 +13,9 @@ const Layout = ({ children }) => {
       <main className="content">{children}</main>
       <footer className="footer">
         <div>
-          <a href="https://twitter.com/richardcrng"> <FaTwitter className="footer-social-icon" /> </a>
-          <a href="https://www.linkedin.com/in/richardcrng"> <FaLinkedinIn className="footer-social-icon" /> </a>
-          <a href="https://techcollective.substack.com"> <FaLink className="footer-social-icon" /> </a>
+          <a href="https://twitter.com/richardcrng" target="_blank" rel="noreferrer"> <FaTwitter className="footer-social-icon" /> </a>
+          <a href="https://www.linkedin.com/in/richardcrng" target="_blank" rel="noreferrer"> <FaLinkedinIn className="footer-social-icon" /> </a>
+          <a href="https://techcollective.substack.com" target="_blank" rel="noreferrer"> <FaLink className="footer-social-icon" /> </a>
         </div>
         <p>&copy; Copyright {new Date().getFullYear()}. Tech Collective Group LTD</p>
       </footer>

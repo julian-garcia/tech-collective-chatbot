@@ -184,4 +184,37 @@
       right: 350px;
     }
   }
+
+  .buttons {
+    display: none;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    position: absolute;
+    left:0;
+    top:0;
+
+    @include tablet-portrait-up { 
+      display: block;
+      left: 415px;
+      top: 571px;
+    }
+
+    > * {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &.right .buttons {
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+    top: unset;
+    left: unset;
+    bottom: 0;
+    right: 0;
+
+    @include tablet-portrait-up { 
+      bottom: -298px;
+      right: 301px;
+    }
+  }
 }
